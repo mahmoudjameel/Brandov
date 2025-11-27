@@ -247,7 +247,7 @@ section {
     background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
 }
 
-/* Simplified Background - Static */
+/* Slideshow Background - Very Lightweight */
 .hero-background {
     position: absolute;
     top: 0;
@@ -260,6 +260,32 @@ section {
     background-repeat: no-repeat;
     opacity: 0.2;
     z-index: 2;
+    animation: bgSlideshow 20s ease-in-out infinite;
+}
+
+/* Lightweight slideshow - just opacity and position changes */
+@keyframes bgSlideshow {
+
+    0%,
+    100% {
+        opacity: 0.2;
+        background-position: center center;
+    }
+
+    25% {
+        opacity: 0.25;
+        background-position: 60% center;
+    }
+
+    50% {
+        opacity: 0.2;
+        background-position: 40% center;
+    }
+
+    75% {
+        opacity: 0.25;
+        background-position: center 60%;
+    }
 }
 
 .hero-overlay {
